@@ -8,10 +8,11 @@ with open('false.txt') as f:
 # Preguntas del tipo "señale la opción correcta"
 for x in range(4):
     options = []
-    options.append('=' + true_options[x])
     for i in range(4):
-            if i != x:
-                options.append('~' + false_options[i])
+        if i == x:
+            options.append('=' + true_options[x])
+        else:
+            options.append('~' + false_options[i])
     
     with open('output.txt', 'a') as o:
         o.write("::" + q_name + chr(97 + x) + "::")
@@ -23,11 +24,12 @@ for x in range(4):
 # Preguntas del tipo "señale la opción incorrecta"
 for x in range(4):
     options = []
-    options.append('=' + false_options[x])
     for i in range(4):
-            if i != x:
-                options.append('~' + true_options[i])
-    
+        if i == x:
+            options.append('=' + false_options[x])
+        else:
+            options.append('~' + true_options[i])
+
     with open('output.txt', 'a') as o:
         o.write("::" + q_name + chr(101 + x) + "::")
         o.write("Señale la opción INCORRECTA:{\n")

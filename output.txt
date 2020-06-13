@@ -1,56 +1,48 @@
-::Pregunta001a::Señale la opción CORRECTA:{
-=Una opción verdadera.
-~Otra opción falsa.
-~Esta opción es falsa.
-~Opción falsa.
-}
+::Pregunta1a::Señale la opción CORRECTA:{
+=Verdadera 1
+~Falsa 2
+~Falsa 3
+~Falsa 4}
 
-::Pregunta001b::Señale la opción CORRECTA:{
-=Otra opción verdadera.
-~Una opción falsa.
-~Esta opción es falsa.
-~Opción falsa.
-}
+::Pregunta1b::Señale la opción CORRECTA:{
+~Falsa 1
+=Verdadera 2
+~Falsa 3
+~Falsa 4}
 
-::Pregunta001c::Señale la opción CORRECTA:{
-=Esta opción es verdadera.
-~Una opción falsa.
-~Otra opción falsa.
-~Opción falsa.
-}
+::Pregunta1c::Señale la opción CORRECTA:{
+~Falsa 1
+~Falsa 2
+=Verdadera 3
+~Falsa 4}
 
-::Pregunta001d::Señale la opción CORRECTA:{
-=Opción verdadera.
-~Una opción falsa.
-~Otra opción falsa.
-~Esta opción es falsa.
-}
+::Pregunta1d::Señale la opción CORRECTA:{
+~Falsa 1
+~Falsa 2
+~Falsa 3
+=Verdadera 4}
 
-::Pregunta001e::Señale la opción INCORRECTA:{
-=Una opción falsa.
-~Otra opción verdadera.
-~Esta opción es verdadera.
-~Opción verdadera.
-}
+::Pregunta1e::Señale la opción INCORRECTA:{
+=Falsa 1
+~Verdadera 2
+~Verdadera 3
+~Verdadera 4}
 
-::Pregunta001f::Señale la opción INCORRECTA:{
-=Otra opción falsa.
-~Una opción verdadera.
-~Esta opción es verdadera.
-~Opción verdadera.
-}
+::Pregunta1f::Señale la opción INCORRECTA:{
+~Verdadera 1
+=Falsa 2
+~Verdadera 3
+~Verdadera 4}
 
-::Pregunta001g::Señale la opción INCORRECTA:{
-=Esta opción es falsa.
-~Una opción verdadera.
-~Otra opción verdadera.
-~Opción verdadera.
-}
+::Pregunta1g::Señale la opción INCORRECTA:{
+~Verdadera 1
+~Verdadera 2
+=Falsa 3
+~Verdadera 4}
 
-::Pregunta001h::Señale la opción INCORRECTA:{
-=Opción falsa.
-~Una opción verdadera.
-~Otra opción verdadera.
-~Esta opción es verdadera.
-}
+::Pregunta1h::Señale la opción INCORRECTA:{
+~Verdadera 1
+~Verdadera 2
+~Verdadera 3
+=Falsa 4}
 

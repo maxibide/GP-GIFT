@@ -1,4 +1,4 @@
-Una opción verdadera.
-Otra opción verdadera.
-Esta opción es verdadera.
-Opción verdadera.
+Verdadera 1
+Verdadera 2
+Verdadera 3
+Verdadera 4
