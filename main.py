@@ -139,7 +139,7 @@ else:
             o.write("~" + false_options[i])
                 
         o.write("=Todas son incorrectas.\n")
-        o.write("~Ninguna es correcta.\n")  
+        o.write("~Ninguna es incorrecta.\n")  
         o.write('}\n\n')
 
     # Agrega la opción "Todas son correctas"
@@ -152,6 +152,6 @@ else:
         for i in range(4):
             o.write("~" + true_options[i])
                 
-        o.write("~Todas son correctas.\n")
-        o.write("=Ninguna es correcta.\n")  
+        o.write("~Todas son incorrectas.\n")
+        o.write("=Ninguna es incorrecta.\n")  
         o.write('}\n\n')
