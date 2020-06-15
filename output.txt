@@ -1,48 +1,108 @@
-::Pregunta1a::Señale la opción CORRECTA:{
-=Verdadera 1
-~Falsa 2
-~Falsa 3
-~Falsa 4}
+::Prueba01a::A partir de este encabezado, señale la opción <b>CORRECTA</b>:{
+=VERDADERA 1
+~FALSA 2
+~FALSA 3
+~FALSA 4
+~Todas son correctas.
+~Ninguna es correcta.
+}
 
-::Pregunta1b::Señale la opción CORRECTA:{
-~Falsa 1
-=Verdadera 2
-~Falsa 3
-~Falsa 4}
+::Prueba01b::A partir de este encabezado, señale la opción <b>CORRECTA</b>:{
+~FALSA 1
+=VERDADERA 2
+~FALSA 3
+~FALSA 4
+~Todas son correctas.
+~Ninguna es correcta.
+}
 
-::Pregunta1c::Señale la opción CORRECTA:{
-~Falsa 1
-~Falsa 2
-=Verdadera 3
-~Falsa 4}
+::Prueba01c::A partir de este encabezado, señale la opción <b>CORRECTA</b>:{
+~FALSA 1
+~FALSA 2
+=VERDADERA 3
+~FALSA 4
+~Todas son correctas.
+~Ninguna es correcta.
+}
 
-::Pregunta1d::Señale la opción CORRECTA:{
-~Falsa 1
-~Falsa 2
-~Falsa 3
-=Verdadera 4}
+::Prueba01d::A partir de este encabezado, señale la opción <b>CORRECTA</b>:{
+~FALSA 1
+~FALSA 2
+~FALSA 3
+=VERDADERA 4
+~Todas son correctas.
+~Ninguna es correcta.
+}
 
-::Pregunta1e::Señale la opción INCORRECTA:{
-=Falsa 1
-~Verdadera 2
-~Verdadera 3
-~Verdadera 4}
+::Prueba01e::A partir de este encabezado, señale la opción <b>CORRECTA</b>:{
+~VERDADERA 1
+~VERDADERA 2
+~VERDADERA 3
+~VERDADERA 4
+=Todas son correctas.
+~Ninguna es correcta.
+}
 
-::Pregunta1f::Señale la opción INCORRECTA:{
-~Verdadera 1
-=Falsa 2
-~Verdadera 3
-~Verdadera 4}
+::Prueba01f::A partir de este encabezado, señale la opción <b>CORRECTA</b>:{
+~FALSA 1
+~FALSA 2
+~FALSA 3
+~FALSA 4
+~Todas son correctas.
+=Ninguna es correcta.
+}
 
-::Pregunta1g::Señale la opción INCORRECTA:{
-~Verdadera 1
-~Verdadera 2
-=Falsa 3
-~Verdadera 4}
+::Prueba01g::A partir de este encabezado, señale la opción <b>INCORRECTA</b>:{
+=FALSA 1
+~VERDADERA 2
+~VERDADERA 3
+~VERDADERA 4
+~Todas son incorrectas.
+~Ninguna es incorrecta.
+}
 
-::Pregunta1h::Señale la opción INCORRECTA:{
-~Verdadera 1
-~Verdadera 2
-~Verdadera 3
-=Falsa 4}
+::Prueba01h::A partir de este encabezado, señale la opción <b>INCORRECTA</b>:{
+~VERDADERA 1
+=FALSA 2
+~VERDADERA 3
+~VERDADERA 4
+~Todas son incorrectas.
+~Ninguna es incorrecta.
+}
+
+::Prueba01i::A partir de este encabezado, señale la opción <b>INCORRECTA</b>:{
+~VERDADERA 1
+~VERDADERA 2
+=FALSA 3
+~VERDADERA 4
+~Todas son incorrectas.
+~Ninguna es incorrecta.
+}
+
+::Prueba01j::A partir de este encabezado, señale la opción <b>INCORRECTA</b>:{
+~VERDADERA 1
+~VERDADERA 2
+~VERDADERA 3
+=FALSA 4
+~Todas son incorrectas.
+~Ninguna es incorrecta.
+}
+
+::Prueba01k::A partir de este encabezado, señale la opción <b>INCORRECTA</b>:{
+~FALSA 1
+~FALSA 2
+~FALSA 3
+~FALSA 4
+=Todas son incorrectas.
+~Ninguna es correcta.
+}
+
+::Prueba01l::A partir de este encabezado, señale la opción <b>INCORRECTA</b>:{
+~VERDADERA 1
+~VERDADERA 2
+~VERDADERA 3
+~VERDADERA 4
+~Todas son correctas.
+=Ninguna es correcta.
+}
 
