@@ -1,4 +1,5 @@
 q_name = input("Ingrese el nombre de la pregunta: ")
+q_encabeza = input("Ingrese el encabezado de la pregunta: ")
 
 with open('true.txt') as t:
     true_options = t.readlines()
@@ -16,7 +17,12 @@ for x in range(4):
     
     with open('output.txt', 'a') as o:
         o.write("::" + q_name + chr(97 + x) + "::")
-        o.write("Señale la opción CORRECTA:{\n")
+        
+        if q_encabeza == "":
+            o.write("Señale la opción <b>CORRECTA</b>:{\n")
+        else:
+            o.write(q_encabeza + "señale la opción <b>CORRECTA</b>:{\n")
+       
         for option in options:
             o.write(option)
         o.write('}\n\n')
@@ -32,7 +38,11 @@ for x in range(4):
 
     with open('output.txt', 'a') as o:
         o.write("::" + q_name + chr(101 + x) + "::")
-        o.write("Señale la opción INCORRECTA:{\n")
+        
+        if q_encabeza == "":
+            o.write("Señale la opción <b>INCORRECTA</b>:{\n")
+        else:
+            o.write(q_encabeza + "señale la opción <b>INCORRECTA</b>:{\n")
         for option in options:
             o.write(option)
         o.write('}\n\n')
