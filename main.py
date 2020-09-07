@@ -1,157 +1,53 @@
-q_name = input("Ingrese el nombre de la pregunta: ")
-q_encabeza = input("Ingrese el encabezado de la pregunta: ")
-todas_ninguna = input('Desea agregar opciones del tipo "Todas/Ninguna es correcta" (s/n)')
+import sys
+
+
+def crear_preguntas(nombre, correctas, incorrectas, encabezado, tipo, version):
+    """Crear las preguntas a partir de un número de opciones verdaderas y falsas"""
+
+    if len(correctas) != len(incorrectas):
+        print("Es necesario que el número de opciones verdaderas sea igual al número de opciones falsas")
+        sys.exit()
+
+    for x in range(len(correctas)):
+        opciones = []
+        for i in range(len(correctas)):
+            if i == x:
+                opciones.append('=' + correctas[x])
+            else:
+                opciones.append('~' + incorrectas[i])
+
+        grabar_preguntas(nombre, opciones, encabezado, tipo, version, x)
+
+
+def grabar_preguntas(nombre, opciones, encabezado, tipo, version, numero):
+    """Graba las preguntas en el archivo output.txt"""
+
+    with open('output.txt', 'a') as o:
+        o.write("::" + nombre + chr(version + numero) + "::")
+
+        if encabezado == "":
+            o.write(tipo)
+        else:
+            o.write(encabezado + " " + tipo)
+
+        for opcion in opciones:
+            o.write(opcion)
+
+        o.write('}\n\n')
+
+
+nombre = input("Ingrese el nombre de la pregunta: ")
+encabezado = input("Ingrese el encabezado de la pregunta: ")
 
 with open('true.txt') as t:
-    true_options = t.readlines()
+    verdaderas = t.readlines()
 with open('false.txt') as f:
-    false_options = f.readlines()
+    falsas = f.readlines()
 
-if todas_ninguna != 's':
+crear_preguntas(nombre, verdaderas, falsas, encabezado,
+                "Señale la opción <b>CORRECTA</b>:{\n", 97)
 
-    # Preguntas del tipo "señale la opción correcta"
-    for x in range(4):
-        options = []
-        for i in range(4):
-            if i == x:
-                options.append('=' + true_options[x])
-            else:
-                options.append('~' + false_options[i])
-        
-        with open('output.txt', 'a') as o:
-            o.write("::" + q_name + chr(97 + x) + "::")
-            
-            if q_encabeza == "":
-                o.write("Señale la opción <b>CORRECTA</b>:{\n")
-            else:
-                o.write(q_encabeza + "señale la opción <b>CORRECTA</b>:{\n")
-        
-            for option in options:
-                o.write(option)
-            o.write('}\n\n')
+crear_preguntas(nombre, falsas, verdaderas, encabezado,
+                "Señale la opción <b>INCORRECTA</b>:{\n", 97 + len(verdaderas))
 
-    # Preguntas del tipo "señale la opción incorrecta"
-    for x in range(4):
-        options = []
-        for i in range(4):
-            if i == x:
-                options.append('=' + false_options[x])
-            else:
-                options.append('~' + true_options[i])
-
-        with open('output.txt', 'a') as o:
-            o.write("::" + q_name + chr(101 + x) + "::")
-            
-            if q_encabeza == "":
-                o.write("Señale la opción <b>INCORRECTA</b>:{\n")
-            else:
-                o.write(q_encabeza + "señale la opción <b>INCORRECTA</b>:{\n")
-            for option in options:
-                o.write(option)
-            o.write('}\n\n')
-
-else:
-
-        # Preguntas del tipo "señale la opción correcta"
-    for x in range(4):
-        options = []
-        for i in range(4):
-            if i == x:
-                options.append('=' + true_options[x])
-            else:
-                options.append('~' + false_options[i])
-        
-        with open('output.txt', 'a') as o:
-            o.write("::" + q_name + chr(97 + x) + "::")
-            
-            if q_encabeza == "":
-                o.write("Señale la opción <b>CORRECTA</b>:{\n")
-            else:
-                o.write(q_encabeza + "señale la opción <b>CORRECTA</b>:{\n")
-        
-            for option in options:
-                o.write(option)
-            
-            o.write("~Todas son correctas.\n")
-            o.write("~Ninguna es correcta.\n")  
-            o.write('}\n\n')
-
-    # Agrega la opción "Todas son correctas"
-    with open('output.txt', 'a') as o:
-        o.write("::" + q_name + chr(101) + "::")
-        if q_encabeza == "":
-           o.write("Señale la opción <b>CORRECTA</b>:{\n")
-        else:
-           o.write(q_encabeza + "señale la opción <b>CORRECTA</b>:{\n")
-        for i in range(4):
-            o.write("~" + true_options[i])
-                
-        o.write("=Todas son correctas.\n")
-        o.write("~Ninguna es correcta.\n")  
-        o.write('}\n\n')
-
-    # Agrega la opción "Todas son correctas"
-    with open('output.txt', 'a') as o:
-        o.write("::" + q_name + chr(102) + "::")
-        if q_encabeza == "":
-            o.write("Señale la opción <b>CORRECTA</b>:{\n")
-        else:
-            o.write(q_encabeza + "señale la opción <b>CORRECTA</b>:{\n")
-        for i in range(4):
-            o.write("~" + false_options[i])
-          
-        o.write("~Todas son correctas.\n")
-        o.write("=Ninguna es correcta.\n")  
-        o.write('}\n\n')
-
-    # Preguntas del tipo "señale la opción incorrecta"
-    for x in range(4):
-        options = []
-        for i in range(4):
-            if i == x:
-                options.append('=' + false_options[x])
-            else:
-                options.append('~' + true_options[i])
-
-        with open('output.txt', 'a') as o:
-            o.write("::" + q_name + chr(103 + x) + "::")
-            
-            if q_encabeza == "":
-                o.write("Señale la opción <b>INCORRECTA</b>:{\n")
-            else:
-                o.write(q_encabeza + "señale la opción <b>INCORRECTA</b>:{\n")
-            for option in options:
-                o.write(option)
-            
-            o.write("~Todas son incorrectas.\n")
-            o.write("~Ninguna es incorrecta.\n")  
-            o.write('}\n\n')
-
-
-    # Agrega la opción "Todas son incorrectas"
-    with open('output.txt', 'a') as o:
-        o.write("::" + q_name + chr(107) + "::")
-        if q_encabeza == "":
-            o.write("Señale la opción <b>INCORRECTA</b>:{\n")
-        else:
-            o.write(q_encabeza + "señale la opción <b>INCORRECTA</b>:{\n")
-        for i in range(4):
-            o.write("~" + false_options[i])
-                
-        o.write("=Todas son incorrectas.\n")
-        o.write("~Ninguna es incorrecta.\n")  
-        o.write('}\n\n')
-
-    # Agrega la opción "Todas son correctas"
-    with open('output.txt', 'a') as o:
-        o.write("::" + q_name + chr(108) + "::")
-        if q_encabeza == "":
-            o.write("Señale la opción <b>INCORRECTA</b>:{\n")
-        else:
-            o.write(q_encabeza + "señale la opción <b>INCORRECTA</b>:{\n")
-        for i in range(4):
-            o.write("~" + true_options[i])
-                
-        o.write("~Todas son incorrectas.\n")
-        o.write("=Ninguna es incorrecta.\n")  
-        o.write('}\n\n')
+print("Se adjuntaron " + str(len(verdaderas) * 2) + " preguntas en el archivo output.txt")
